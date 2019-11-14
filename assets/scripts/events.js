@@ -26,15 +26,17 @@
 //     .then(ui.onSignOutSuccess)
 //     .catch(ui.onSignOutFailure)
 // }
-//
-// const addHandlers = event => {
-//   $('#sign-up').on('submit', onSignUp)
-//   $('#sign-in').on('submit', onSignIn)
-//   $('#change-pass').on('submit', onChangePass)
-//   $('#sign-out').on('submit', onSignOut)
-// }
-let boardData = require('./board-data.js')
 
+const boardData = require('./board-data.js')
+// const  winners is when the board reflects three of either 'x' or 'o'
+// in a row. we can show the board as an array.
+// as soon as one of nine combinations of three in a row (per x or o) is hit,
+// game should stop.
+
+// check if any combination of winning indexes matches three in a row rule
+// boardData.board.multiIndexOf('x') =
+//
+// ]
 let p1 = 'o'
 const switchPlayer = () => {
   if (p1 === 'x') {
