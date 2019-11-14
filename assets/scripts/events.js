@@ -55,14 +55,26 @@
 //   $('#change-pass').on('submit', onChangePass)
 //   $('#sign-out').on('submit', onSignOut)
 // }
+const p1 = 'x'
+const p2 = 'o'
+
+const switchPlayer = pl => {
+  if (pl === p1) {
+    pl = p2
+  } else {
+    pl = p1
+  }
+  console.log(pl)
+  return pl
+}
+
 const insertMark = event => {
   event.preventDefault()
-  $(event.target).html(`<p> X </p>`)
+  $(event.target).html(switchPlayer)
 }
 
 const addHandlers = event => {
   $('.TTT').on('click', insertMark)
-  console.log('click')
 }
 
 module.exports = {
