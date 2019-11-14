@@ -66,25 +66,29 @@ const switchPlayer = () => {
   return p1
 }
 
-const classClicked = obj => {
-  obj.className += ' used'
-  console.log(obj.className)
+const classClicked = event => {
+  if (!event.target.className.includes(' used')) {
+    event.target.className += ' used'
+  }
+  console.log(event.target.className)
+  return (event.target.className)
 }
 
 const insertMark = event => {
   event.preventDefault()
-  if (event.class !== 'used') {
+  if (!event.target.className.includes(' used')) {
     $(event.target).html(`<h2>${switchPlayer()}</h2>`)
+    $('#clickResult').text(`You Marked an ${switchPlayer()}!`)
   } else {
-    console.log("There's already a mark there!")
+    $('#clickResult').text(`Oops! It Looks Like There's Already Something There`)
   }
   switchPlayer()
-  console.log(switchPlayer())
+  // console.log(switchPlayer())
 }
 
 const addHandlers = event => {
   $('.TTT').on('click', insertMark)
-  $('.TTT').on('click', classUsed)
+  $('.TTT').on('click', classClicked)
 }
 
 module.exports = {
