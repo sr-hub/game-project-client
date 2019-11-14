@@ -1,9 +1,9 @@
 'use strict'
 
-const store = require('../store')
-const api = require('./api')
-const formFields = require('../../../lib/get-form-fields')
-const ui = require('./ui')
+// const store = require('../store')
+// const api = require('./api')
+// const formFields = require('../../../lib/get-form-fields')
+// const ui = require('./ui')
 
 // const onChangePass = event => {
 //   event.preventDefault()
@@ -57,12 +57,14 @@ const ui = require('./ui')
 // }
 const insertMark = event => {
   event.preventDefault()
-  $(event.target).html(``)
+  $(event.target).html(`<p> X </p>`)
 }
 
-const addHandler = event => {
+const addHandlers = event => {
   $('.TTT').on('click', insertMark)
+  console.log('click')
 }
+
 module.exports = {
   addHandlers
 }
