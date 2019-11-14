@@ -55,26 +55,36 @@
 //   $('#change-pass').on('submit', onChangePass)
 //   $('#sign-out').on('submit', onSignOut)
 // }
-const p1 = 'x'
-const p2 = 'o'
-
-const switchPlayer = pl => {
-  if (pl === p1) {
-    pl = p2
+let p1 = 'o'
+const switchPlayer = () => {
+  if (p1 === 'x') {
+    p1 = 'o'
   } else {
-    pl = p1
+    p1 = 'x'
   }
-  console.log(pl)
-  return pl
+  console.log(p1)
+  return p1
+}
+
+const classClicked = obj => {
+  obj.className += ' used'
+  console.log(obj.className)
 }
 
 const insertMark = event => {
   event.preventDefault()
-  $(event.target).html(switchPlayer)
+  if (event.class !== 'used') {
+    $(event.target).html(`<h2>${switchPlayer()}</h2>`)
+  } else {
+    console.log("There's already a mark there!")
+  }
+  switchPlayer()
+  console.log(switchPlayer())
 }
 
 const addHandlers = event => {
   $('.TTT').on('click', insertMark)
+  $('.TTT').on('click', classUsed)
 }
 
 module.exports = {
