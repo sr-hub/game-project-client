@@ -79,10 +79,10 @@ const insertMark = event => {
   if (!event.target.className.includes(' used')) {
     $(event.target).html(`<h2>${switchPlayer()}</h2>`)
     $('#clickResult').text(`You Marked an ${switchPlayer()}!`)
+    switchPlayer()
   } else {
     $('#clickResult').text(`Oops! It Looks Like There's Already Something There`)
   }
-  switchPlayer()
   // console.log(switchPlayer())
 }
 
