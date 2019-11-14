@@ -4,28 +4,6 @@
 // const api = require('./api')
 // const formFields = require('../../../lib/get-form-fields')
 // const ui = require('./ui')
-
-// const onChangePass = event => {
-//   event.preventDefault()
-//
-//   const form = event.target
-//   const formData = formFields(form)
-//
-//   api.changePass(formData)
-//     .then(ui.onChangePassSuccess)
-//     .catch(ui.onChangePassFailure)
-// }
-//
-// const onSignUp = event => {
-//   event.preventDefault()
-//
-//   const form = event.target
-//   const formData = formFields(form)
-//
-//   api.signUp(formData)
-//     .then(ui.onSignUpSuccess)
-//     .catch(ui.onSignUpFailure)
-// }
 //
 // const onSignIn = event => {
 //   event.preventDefault()
@@ -55,6 +33,8 @@
 //   $('#change-pass').on('submit', onChangePass)
 //   $('#sign-out').on('submit', onSignOut)
 // }
+let boardData = require('./board-data.js')
+
 let p1 = 'o'
 const switchPlayer = () => {
   if (p1 === 'x') {
@@ -64,6 +44,10 @@ const switchPlayer = () => {
   }
   console.log(p1)
   return p1
+}
+
+const addArray = event => {
+  boardData.board.splice(parseInt(event.target.id, 10), 1, p1)
 }
 
 const classClicked = event => {
@@ -83,12 +67,13 @@ const insertMark = event => {
   } else {
     $('#clickResult').text(`Oops! It Looks Like There's Already Something There`)
   }
-  // console.log(switchPlayer())
+  console.log(boardData.board)
 }
 
 const addHandlers = event => {
   $('.TTT').on('click', insertMark)
   $('.TTT').on('click', classClicked)
+  $('.TTT').on('click', addArray)
 }
 
 module.exports = {
