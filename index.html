@@ -14,10 +14,12 @@
     <body>
     <header>
       <h1> Header </h1>
+      <div id="message"></div>
     </header>
 
       <div class="container">
         <h1>Tic-Tac-Toe</h1>
+
         <div class="row">
           <div id="0" class="col-4 box alt-color TTT">0</div>
           <div id="1" class="col-4 box alt-color TTT">1</div>
@@ -59,19 +61,20 @@
   </form>
 <!-- end sign in form -->
 </div>
-<div class="change-pass">
+<div class="change-pw">
   <!-- change pass -->
   <h2>Change Password</h2>
   <form id="changePass">
   <input name="passwords[old]" type="password">
   <input name="passwords[new]" type="password">
   <button type="submit" class="btn btn-primary">Change Password</button>
-</form>
+  </form>
+</div>
 <!-- end change pass -->
 <!-- sign out -->
 <div class ="sign-out">
   <h2>Sign Out</h2>
-  <form id="sign-out">
+  <form id="signOut">
   <button type="submit" class="btn btn-primary">Sign Out</button>
   </form>
 </div>

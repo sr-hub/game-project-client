@@ -17,42 +17,42 @@ const onFailure = message => {
   $('form').trigger('reset')
 }
 const onChangePassSuccess = () => {
-  onSuccess('You changed your pass!')
+  onSuccess('You Changed Your Password!')
 }
 
 const onChangePassFailure = () => {
-  onFailure('Change Password Failed you bag of meat.')
+  onFailure('Change Password Failed!')
 }
 
 const onSignOutSuccess = () => {
-  onSuccess('You did it bae!')
+  onSuccess('You Signed Out! Come Back Soon!')
   $('.after-auth').hide()
   $('.before-auth').show()
   store.user = {}
 }
 
 const onSignOutFailure = () => {
-  onFailure("You couldn't be logged out.")
+  onFailure("You Couldn't Be Logged Out.")
 }
 
 const onSignUpSuccess = () => {
-  onSuccess('You did it bae! You Signed Up!')
+  onSuccess('You Signed Up! Welcome to Tic-Tac-Toe!')
 }
 
 const onSignUpFailure = () => {
-  onFailure('Ohhhh no! You blew it! Failed to Sign Up')
+  onFailure('Something Went Wrong! Does Your Account Already Exist?')
 }
 
 const onSignInSuccess = responseData => {
   store.user = responseData.user
   console.log(store)
-  onSuccess('Boo caught you sleeping. Looking good; welcome back.')
+  onSuccess('Sign In Successful! Welcome Back.')
   $('.after-auth').show()
   $('.before-auth').hide()
 }
 
 const onSignInFailure = () => {
-  onFailure("Your pass was wrong or your account doesn't exist.")
+  onFailure("Oops. Couldn't Sign You In. Please Try Again or Create An Account.")
 }
 
 module.exports = {

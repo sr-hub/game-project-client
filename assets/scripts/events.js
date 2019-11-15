@@ -1,6 +1,5 @@
 'use strict'
 
-
 const board = ['', '', '', '', '', '', '', '', '']
 // console.log(board)
 //
@@ -32,7 +31,7 @@ const board = ['', '', '', '', '', '', '', '', '']
 // console.log(logWin)
 const store = require('./store')
 const api = require('./api')
-const formFields = require('../../../lib/get-form-fields')
+const formFields = require('../../lib/get-form-fields')
 const ui = require('./ui')
 //
 const onChangePass = event => {
@@ -196,10 +195,10 @@ const addHandlers = event => {
   $('.TTT').on('click', insertMark)
   $('.TTT').on('click', classClicked)
   $('.TTT').on('click', addArray)
-  $('#sign-up').on('submit', onSignUp)
-  $('#sign-in').on('submit', onSignIn)
-  $('#change-pass').on('submit', onChangePass)
-  $('#sign-out').on('submit', onSignOut)
+  $('#signUp').on('submit', onSignUp)
+  $('#signIn').on('submit', onSignIn)
+  $('#changePass').on('submit', onChangePass)
+  $('#signOut').on('submit', onSignOut)
 }
 
 module.exports = {

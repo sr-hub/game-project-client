@@ -4,6 +4,7 @@ const events = require('./events')
 const config = require('./config')
 
 const changePass = formData => {
+  console.log('your change-pass button worked!')
   return $.ajax({
     url: config.apiUrl + '/change-password',
     method: 'PATCH',
@@ -12,10 +13,11 @@ const changePass = formData => {
       Authorization: `Token token=${store.user.token}`
     }
   })
-  console.log('you changed your password!')
+  // console.log('you changed your password!')
 }
 
 const signOut = () => {
+  console.log('your sign-out button worked!')
   return $.ajax({
     url: config.apiUrl + '/sign-out',
     method: 'DELETE',
@@ -23,30 +25,30 @@ const signOut = () => {
       Authorization: `Token token=${store.user.token}`
     }
   })
-  console.log('you signed out!')
+  // console.log('you signed out!')
 }
 
 const signUp = formData => {
+  console.log('your sign-up button worked!')
   return $.ajax({
     url: config.apiUrl + '/sign-up',
     method: 'POST',
     data: formData
   })
-  console.log('you signed up!')
 }
 
 const signIn = formData => {
+  console.log('your sign-in button worked!')
   return $.ajax({
     url: config.apiUrl + '/sign-in',
     method: 'POST',
     data: formData
   })
-  console.log('you signed in!')
 }
 
 module.exports = {
   signUp,
   signIn,
   changePass,
-  signOut,
+  signOut
 }
