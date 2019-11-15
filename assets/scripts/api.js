@@ -1,7 +1,7 @@
 'use strict'
-const store = require('../store')
+const store = require('./store')
 const events = require('./events')
-const config = require('../config')
+const config = require('./config')
 
 const changePass = formData => {
   return $.ajax({
@@ -12,6 +12,7 @@ const changePass = formData => {
       Authorization: `Token token=${store.user.token}`
     }
   })
+  console.log('you changed your password!')
 }
 
 const signOut = () => {
@@ -22,6 +23,7 @@ const signOut = () => {
       Authorization: `Token token=${store.user.token}`
     }
   })
+  console.log('you signed out!')
 }
 
 const signUp = formData => {
@@ -30,6 +32,7 @@ const signUp = formData => {
     method: 'POST',
     data: formData
   })
+  console.log('you signed up!')
 }
 
 const signIn = formData => {
@@ -38,6 +41,7 @@ const signIn = formData => {
     method: 'POST',
     data: formData
   })
+  console.log('you signed in!')
 }
 
 module.exports = {
