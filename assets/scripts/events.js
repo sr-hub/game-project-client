@@ -30,10 +30,10 @@ const board = ['', '', '', '', '', '', '', '', '']
 //
 // const logWin = boardWins.some(element => element === true)
 // console.log(logWin)
-// const store = require('../store')
-// const api = require('./api')
-// const formFields = require('../../../lib/get-form-fields')
-// const ui = require('./ui')
+const store = require('../store')
+const api = require('./api')
+const formFields = require('../../../lib/get-form-fields')
+const ui = require('./ui')
 //
 // const onSignIn = event => {
 //   event.preventDefault()
@@ -57,7 +57,7 @@ const board = ['', '', '', '', '', '', '', '', '']
 //     .catch(ui.onSignOutFailure)
 // }
 
-const boardData = require('./board-data.js')
+// const boardData = require('./board-data.js')
 // const  winners is when the board reflects three of either 'x' or 'o'
 // in a row. we can show the board as an array.
 // as soon as one of nine combinations of three in a row (per x or o) is hit,
@@ -142,6 +142,7 @@ const insertMark = event => {
       $('#clickResult').text(`Oops! It Looks Like There's Already Something There`)
     }
   } else {
+    $('#status').text('')
     $('#clickResult').text('The Game Has Ended! ' + p1 + ' Won! Start a New Game!')
     console.log(board)
     console.log(row1)
