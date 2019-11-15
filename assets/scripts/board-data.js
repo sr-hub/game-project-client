@@ -18,7 +18,7 @@ const checkWin = (arr) => { // found this logic on stackoverflow.
 // Code saltered to fit our conventions. author: Robert Fricke
 // url: https://stackoverflow.com/questions/14832603/check-if-all-values-of-array-are-equal
   for (let i = 1; i < arr.length; i++) {
-    if (arr[i] !== arr[0]) {
+    if (arr[i] !== arr[0] || arr[i] === '') {
       // console.log(arr)
       // console.log(arr[0])
       return false
@@ -36,7 +36,8 @@ const checkWin = (arr) => { // found this logic on stackoverflow.
 const boardWins = winCons.map(element => checkWin(element))
 console.log(boardWins)
 
-const logWin = boardWins.some(element => true)
+const logWin = boardWins.some(element => element === true)
+
 console.log(logWin)
 
 // now that we can check to see if there is a win, we need to figure out which
