@@ -69,9 +69,10 @@ const insertMark = event => {
     } else {
       $('#clickResult').text(`Oops! It Looks Like There's Already Something There`)
     }
-  console.log(boardData.board)
-} else {
-  $('#clickResult').text(`The Game Has Ended! Start a New Game!`)
+    console.log(boardData.board)
+  } else {
+    $('#clickResult').text(`The Game Has Ended! Start a New Game!`)
+  }
 }
 
 const addHandlers = event => {
