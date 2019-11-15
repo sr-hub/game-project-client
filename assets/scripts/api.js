@@ -44,5 +44,5 @@ module.exports = {
   signUp,
   signIn,
   changePass,
-  signOut
+  signOut,
 }
