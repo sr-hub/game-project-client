@@ -62,14 +62,16 @@ const classClicked = event => {
 
 const insertMark = event => {
   event.preventDefault()
-  if (!event.target.className.includes(' used')) {
-    $(event.target).html(`<h2>${switchPlayer()}</h2>`)
-    switchPlayer()
-    $('#clickResult').text(`You Marked an ${switchPlayer()}!`)
-  } else {
-    $('#clickResult').text(`Oops! It Looks Like There's Already Something There`)
-  }
+  if (boardData.logWin === false) {
+    if (!event.target.className.includes(' used')) {
+      $(event.target).html(`<h2>${switchPlayer()}</h2>`)
+      $('#clickResult').text('You Marked an ' + p1 + '!')
+    } else {
+      $('#clickResult').text(`Oops! It Looks Like There's Already Something There`)
+    }
   console.log(boardData.board)
+} else {
+  $('#clickResult').text(`The Game Has Ended! Start a New Game!`)
 }
 
 const addHandlers = event => {
