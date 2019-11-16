@@ -18,7 +18,7 @@ const onGetGames = () => {
   const form = event.target
   const formData = formFields(form)
 
-  gameApi.updateGame(formData)
+  gameApi.getAllGames(formData)
     .then(gameUi.onGetGameSuccess)
     .catch(gameUi.onGetGameFailure)
 }

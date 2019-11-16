@@ -14,7 +14,7 @@ const createGame = () => {
 }
 
 const getGame = () => {
-  console.log('your get games button worked!')
+  console.log('your get game button worked!')
   return $.ajax({
     url: config.apiUrl + '/games/:id',
     method: 'GET',
@@ -58,5 +58,6 @@ const updateGame = formData => {
 module.exports = {
   createGame,
   getGame,
-  updateGame
+  updateGame,
+  getAllGames
 }
