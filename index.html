@@ -15,11 +15,59 @@
     <header>
       <h1> Header </h1>
       <div id="message"></div>
+      <div id="gameMessage"></div>
     </header>
 
       <div class="container">
         <h1>Tic-Tac-Toe</h1>
+        <h2>Get Game List</h2>
+        <form id="getGames">
+        <button type="submit" class="btn btn-primary">Get All Games</button>
+        </form>
 
+        <h2>Get Game by ID</h2>
+        <form id="getGameByID">
+        <input name="passwords[old]" type="text">
+        <button type="submit" class="btn btn-primary">Change Password</button>
+        </form>
+
+  <div class="beforePlay">
+        <!-- sign up form -->
+        <h2>Sign Up</h2>
+        <form id="signUp">
+        <input name="credentials[email]" type="text" value="an@example.email">
+        <input name="credentials[password]" type="password" value="an example password">
+        <input name="credentials[password_confirmation]" type="password" value="an example password">
+        <button type="submit" class="btn btn-primary">Sign Up</button>
+        </form>
+      <!-- end sign-up form -->
+      <!-- sign in form -->
+        <h2>Sign In</h2>
+        <form id="signIn">
+        <input name="credentials[email]" type="text" value="an@example.email">
+        <input name="credentials[password]" type="password" value="an example password">
+        <button type="submit" class="btn btn-primary">Sign In</button>
+        </form>
+      <!-- end sign in form -->
+      </div>
+      <div class="change-pw">
+        <!-- change pass -->
+        <h2>Change Password</h2>
+        <form id="changePass">
+        <input name="passwords[old]" type="password">
+        <input name="passwords[new]" type="password">
+        <button type="submit" class="btn btn-primary">Change Password</button>
+        </form>
+      </div>
+      <!-- end change pass -->
+      <!-- sign out -->
+      <div class ="sign-out">
+        <h2>Sign Out</h2>
+        <form id="signOut">
+        <button type="submit" class="btn btn-primary">Sign Out</button>
+        </form>
+      </div>
+      <!-- end sign out     -->
         <div class="row">
           <div id="0" class="col-4 box alt-color TTT">0</div>
           <div id="1" class="col-4 box alt-color TTT">1</div>
@@ -42,46 +90,17 @@
     </div>
     <div id=status></div>
     <div id=clickResult></div>
-<div class="beforePlay">
-  <!-- sign up form -->
-  <h2>Sign Up</h2>
-  <form id="signUp">
-  <input name="credentials[email]" type="text" value="an@example.email">
-  <input name="credentials[password]" type="password" value="an example password">
-  <input name="credentials[password_confirmation]" type="password" value="an example password">
-  <button type="submit" class="btn btn-primary">Sign Up</button>
-  </form>
-<!-- end sign-up form -->
-<!-- sign in form -->
-  <h2>Sign In</h2>
-  <form id="signIn">
-  <input name="credentials[email]" type="text" value="an@example.email">
-  <input name="credentials[password]" type="password" value="an example password">
-  <button type="submit" class="btn btn-primary">Sign In</button>
-  </form>
-<!-- end sign in form -->
-</div>
-<div class="change-pw">
-  <!-- change pass -->
-  <h2>Change Password</h2>
-  <form id="changePass">
-  <input name="passwords[old]" type="password">
-  <input name="passwords[new]" type="password">
-  <button type="submit" class="btn btn-primary">Change Password</button>
-  </form>
-</div>
-<!-- end change pass -->
-<!-- sign out -->
-<div class ="sign-out">
-  <h2>Sign Out</h2>
-  <form id="signOut">
-  <button type="submit" class="btn btn-primary">Sign Out</button>
-  </form>
-</div>
-<!-- end sign out     -->
-    <footer>
+
+  <h2>New Game</h2>
+<form id="newGame">
+<button type="submit" class="btn btn-primary">Start a New Game</button>
+</form>
+
+  <footer>
       <p> Copyright and Trademark and Credits </p>
-    </footer>
+  </footer>
+
+<div data-cell-index='0'></div>
 
   </body>
 </html>

@@ -3,52 +3,60 @@ const store = require('./store')
 const events = require('./events')
 const config = require('./config')
 
-const changePass = formData => {
-  console.log('your change-pass button worked!')
+const createGame = () => {
+  console.log('your create game button worked!')
   return $.ajax({
     url: config.apiUrl + '/change-password',
-    method: 'PATCH',
-    data: formData,
-    headers: {
-      Authorization: `Token token=${store.user.token}`
-    }
+    method: 'POST',
+    data: {}
   })
   // console.log('you changed your password!')
 }
 
-const signOut = () => {
-  console.log('your sign-out button worked!')
+const getGame = () => {
+  console.log('your get games button worked!')
   return $.ajax({
-    url: config.apiUrl + '/sign-out',
-    method: 'DELETE',
+    url: config.apiUrl + '/games/:id',
+    method: 'GET',
     headers: {
       Authorization: `Token token=${store.user.token}`
     }
   })
-  // console.log('you signed out!')
 }
 
-const signUp = formData => {
-  console.log('your sign-up button worked!')
+const getAllGames = () => {
+  console.log('your get games button worked!')
   return $.ajax({
-    url: config.apiUrl + '/sign-up',
-    method: 'POST',
-    data: formData
+    url: config.apiUrl + '/games',
+    method: 'GET',
+    headers: {
+      Authorization: `Token token=${store.user.token}`
+    }
   })
 }
 
-const signIn = formData => {
-  console.log('your sign-in button worked!')
+const updateGame = formData => {
+  console.log('your update game function worked!')
   return $.ajax({
-    url: config.apiUrl + '/sign-in',
-    method: 'POST',
-    data: formData
+    url: config.apiUrl + '/sign-up',
+    method: 'PATCH',
+    data: {
+      "game": {
+        "cell": {
+          "index": 0,
+          "value": ""
+        },
+          "over": false
+      }
+    },
+    headers: {
+      Authorization: `Token token=${store.user.token}`
+    }
   })
 }
 
 module.exports = {
-  signUp,
-  signIn,
-  changePass,
-  signOut
+  createGame,
+  getGame,
+  updateGame
 }
