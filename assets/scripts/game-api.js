@@ -6,11 +6,12 @@ const config = require('./config')
 const createGame = () => {
   console.log('your create game button worked!')
   return $.ajax({
-    url: config.apiUrl + '/change-password',
+    url: config.apiUrl + '/games',
     method: 'POST',
-    data: {}
+    headers: {
+      Authorization: `Token token=${store.user.token}`
+    }
   })
-  // console.log('you changed your password!')
 }
 
 const getGame = () => {
@@ -35,18 +36,19 @@ const getAllGames = () => {
   })
 }
 
-const updateGame = formData => {
+const updateGame = (index, symbol) => {
   console.log('your update game function worked!')
+  console.log(store.game)
   return $.ajax({
-    url: config.apiUrl + '/sign-up',
+    url: config.apiUrl + '/games/' + store.game.id,
     method: 'PATCH',
     data: {
-      "game": {
-        "cell": {
-          "index": 0,
-          "value": ""
+      'game': {
+        'cell': {
+          'index': event.target.id,
+          'value': events.p1
         },
-          "over": false
+          'over': false
       }
     },
     headers: {

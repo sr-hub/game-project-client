@@ -6,6 +6,8 @@ $font-color: $light;
 
 body {
   background-color: $body-bg-color;
+  display: grid;
+  min-height: 100vh;
 }
 
 .box {
@@ -20,6 +22,12 @@ body {
 
 .alt-color {
   background-color: $alt-color;
+}
+
+.board {
+  margin: 0px auto;
+  max-height: calc(70vh);
+  max-width: calc(70vh)
 }
 
 #message {

@@ -18,20 +18,10 @@
       <div id="gameMessage"></div>
     </header>
 
-      <div class="container">
+  <div class="container">
         <h1>Tic-Tac-Toe</h1>
-        <h2>Get Game List</h2>
-        <form id="getGames">
-        <button type="submit" class="btn btn-primary">Get All Games</button>
-        </form>
 
-        <h2>Get Game by ID</h2>
-        <form id="getGameByID">
-        <input name="passwords[old]" type="text">
-        <button type="submit" class="btn btn-primary">Change Password</button>
-        </form>
-
-  <div class="beforePlay">
+    <div class="beforeAuth">
         <!-- sign up form -->
         <h2>Sign Up</h2>
         <form id="signUp">
@@ -49,7 +39,9 @@
         <button type="submit" class="btn btn-primary">Sign In</button>
         </form>
       <!-- end sign in form -->
-      </div>
+    </div>
+
+  <section id='afterAuth'>
       <div class="change-pw">
         <!-- change pass -->
         <h2>Change Password</h2>
@@ -68,13 +60,27 @@
         </form>
       </div>
       <!-- end sign out     -->
+      <h2>Get Game List</h2>
+      <form id="getGames">
+      <button type="submit" class="btn btn-primary">Get All Games</button>
+      </form>
+
+      <h2>Get Game by ID</h2>
+      <form id="getGameByID">
+      <input name="passwords[old]" type="text">
+      <button type="submit" class="btn btn-primary">Change Password</button>
+      </form>
+
+    </section>
+
+    <section id='duringPlay' class='board'>
+        <!-- Stack the columns on mobile by making one full-width and the other half-width -->
         <div class="row">
           <div id="0" class="col-4 box alt-color TTT">0</div>
           <div id="1" class="col-4 box alt-color TTT">1</div>
           <div id="2" class="col-4 box alt-color TTT">2</div>
         </div>
 
-        <!-- Stack the columns on mobile by making one full-width and the other half-width -->
         <div class="row">
           <div id="3" class="col-4 box TTT">3</div>
           <div id="4" class="col-4 box TTT">4</div>
@@ -88,13 +94,16 @@
           <div id="8" class="col-4 box alt-color TTT">8</div>
         </div>
     </div>
+  </section>
     <div id=status></div>
     <div id=clickResult></div>
 
+
   <h2>New Game</h2>
-<form id="newGame">
-<button type="submit" class="btn btn-primary">Start a New Game</button>
-</form>
+  <form id="newGame">
+  <button type="submit" class="btn btn-primary">Start a New Game</button>
+  </form>
+</section>
 
   <footer>
       <p> Copyright and Trademark and Credits </p>

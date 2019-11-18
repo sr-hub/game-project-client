@@ -19,8 +19,8 @@ const onGameFailure = message => {
   $('form').trigger('reset')
 }
 
-const onUpdateGameSuccess = click => {
-  onGameSuccess('You Changed Your Password!')
+const onUpdateGameSuccess = () => {
+  onGameSuccess('You Successfully Made a Move')
   store.game.cells = events.board
   console.log(store)
   console.log('update works!')
@@ -30,13 +30,14 @@ const onUpdateGameFailure = () => {
   onGameFailure('Change Password Failed!')
 }
 
-// const onNewGameSuccess = () => {
-//   // $('.after-auth').hide()
-//   // $('.before-auth').show()
-//   store.user = {}
-// }
+const onCreateGameSuccess = gameData => {
+  $('.after-auth').hide()
+  $('.before-auth').show()
+  store.game = gameData.game
+  console.log(store.game)
+}
 
-const onNewGameFailure = () => {
+const onCreateGameFailure = () => {
   onGameFailure("Oh no! Couldn't initialize a new game.")
 }
 
@@ -48,12 +49,9 @@ const onGetGameFailure = () => {
   onGameFailure('Something Went Wrong! Are You Sure There Are Stored Games?')
 }
 
-
-//const onNewGame
-
 module.exports = {
-  // onNewGameSuccess,
-  onNewGameFailure,
+  onCreateGameSuccess,
+  onCreateGameFailure,
   onUpdateGameSuccess,
   onUpdateGameFailure,
   onGetGameSuccess,

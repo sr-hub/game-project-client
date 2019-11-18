@@ -202,5 +202,6 @@ const addHandlers = event => {
 }
 
 module.exports = {
-  addHandlers
+  addHandlers,
+  board
 }

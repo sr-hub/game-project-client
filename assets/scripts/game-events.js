@@ -25,6 +25,11 @@ const onGetGames = () => {
 
 const onNewGame = () => {
   event.preventDefault()
+  $('.TTT').html('')
+
+  gameApi.createGame()
+    .then(gameUi.onCreateGameSuccess)
+    .catch(gameUi.onCreateGameFailure)
 }
 
 const onUpdateGame = () => {
@@ -43,6 +48,7 @@ const gameHandlers = event => {
   $('#getGames').on('submit', onGetGames)
   $('#getGameByID').on('submit', onGetGame)
   $('#newGame').on('submit', onNewGame)
+  $('.TTT').on('click', onUpdateGame)
 }
 
 module.exports = {
