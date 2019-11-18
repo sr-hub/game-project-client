@@ -27,8 +27,8 @@ const onChangePassFailure = () => {
 
 const onSignOutSuccess = () => {
   onSuccess('You Signed Out! Come Back Soon!')
-  $('.after-auth').hide()
-  $('.before-auth').show()
+  $('#afterAuth').hide()
+  $('#beforeAuth').show()
   store.user = {}
 }
 
@@ -48,8 +48,8 @@ const onSignInSuccess = responseData => {
   store.user = responseData.user
   console.log(store)
   onSuccess('Sign In Successful! Welcome Back.')
-  $('.after-auth').show()
-  $('.before-auth').hide()
+  $('#afterAuth').show()
+  $('#beforeAuth').hide()
 }
 
 const onSignInFailure = () => {

@@ -31,9 +31,12 @@ const onUpdateGameFailure = () => {
 }
 
 const onCreateGameSuccess = gameData => {
-  $('.after-auth').hide()
-  $('.before-auth').show()
+  // $('.createGame').hide()
+  $('#duringPlay').show()
+  $('.TTT').html('')
+  console.log($('.TTT').html())
   store.game = gameData.game
+  events.board = ['', '', '', '', '', '', '', '', '']
   console.log(store.game)
 }
 

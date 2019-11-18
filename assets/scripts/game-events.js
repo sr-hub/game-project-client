@@ -13,7 +13,7 @@ const onGetGame = () => {
     .catch(gameUi.onGetGameFailure)
 }
 
-const onGetGames = () => {
+const onGetGames = (id) => {
   event.preventDefault()
   const form = event.target
   const formData = formFields(form)
@@ -25,7 +25,7 @@ const onGetGames = () => {
 
 const onNewGame = () => {
   event.preventDefault()
-  $('.TTT').html('')
+  $('div').removeClass('used')
 
   gameApi.createGame()
     .then(gameUi.onCreateGameSuccess)
