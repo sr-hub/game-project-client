@@ -1,6 +1,5 @@
 'use strict'
 const store = require('./store')
-const events = require('./events')
 const config = require('./config')
 
 const changePass = formData => {

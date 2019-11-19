@@ -1,6 +1,6 @@
 'use strict'
 const store = require('./store')
-const events = require('./events')
+// const events = require('./events')
 const config = require('./config')
 
 const createGame = () => {
@@ -36,7 +36,7 @@ const getAllGames = () => {
   })
 }
 
-const updateGame = (index, symbol) => {
+const updateGame = (index, symbol, gameOver) => {
   console.log('your update game function worked!')
   console.log(store.game)
   return $.ajax({
@@ -45,10 +45,10 @@ const updateGame = (index, symbol) => {
     data: {
       'game': {
         'cell': {
-          'index': event.target.id,
-          'value': events.p1
+          'index': index,
+          'value': symbol
         },
-          'over': false
+        'over': gameOver
       }
     },
     headers: {

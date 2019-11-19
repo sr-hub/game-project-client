@@ -56,8 +56,6 @@ const onSignInFailure = () => {
   onFailure("Oops. Couldn't Sign You In. Please Try Again or Create An Account.")
 }
 
-//const onNewGame
-
 module.exports = {
   onSignUpSuccess,
   onSignUpFailure,
