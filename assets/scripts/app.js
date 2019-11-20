@@ -14,15 +14,15 @@ $(() => {
   game.gameHandlers()
 })
 
-$(() => {
-  let currentPlayer = '✕'
-
-  const onBoxClick = (event) => {
-    console.log('click')
-    const $box = $(event.target)
-    currentPlayer = currentPlayer === '○' ? '✕' : '○'
-    $box.css('background', 'transparent').text(currentPlayer)
-  }
-
-  $('.box').on('click', onBoxClick)
-})
+// $(() => {
+//   let currentPlayer = '✕'
+//
+//   const onBoxClick = (event) => {
+//     console.log('click')
+//     const $box = $(event.target)
+//     currentPlayer = currentPlayer === '○' ? '✕' : '○'
+//     $box.css('background', 'transparent').text(currentPlayer)
+//   }
+//
+//   $('.box').on('click', onBoxClick)
+// })
