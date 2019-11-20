@@ -4,7 +4,7 @@ const store = require('./store')
 const config = require('./config')
 
 const createGame = () => {
-  console.log('your create game button worked!')
+  // console.log('your create game button worked!')
   return $.ajax({
     url: config.apiUrl + '/games',
     method: 'POST',
@@ -15,7 +15,7 @@ const createGame = () => {
 }
 
 const getGame = () => {
-  console.log('your get game button worked!')
+  // console.log('your get game button worked!')
   return $.ajax({
     url: config.apiUrl + '/games/:id',
     method: 'GET',
@@ -26,7 +26,7 @@ const getGame = () => {
 }
 
 const getAllGames = () => {
-  console.log('your get games button worked!')
+  // console.log('your get games button worked!')
   return $.ajax({
     url: config.apiUrl + '/games',
     method: 'GET',
@@ -37,8 +37,8 @@ const getAllGames = () => {
 }
 
 const updateGame = (index, symbol, gameOver) => {
-  console.log('your update game function worked!')
-  console.log(store.game)
+  // console.log('your update game function worked!')
+  // console.log(store.game)
   return $.ajax({
     url: config.apiUrl + '/games/' + store.game.id,
     method: 'PATCH',

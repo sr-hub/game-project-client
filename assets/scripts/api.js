@@ -3,7 +3,7 @@ const store = require('./store')
 const config = require('./config')
 
 const changePass = formData => {
-  console.log('your change-pass button worked!')
+  // console.log('your change-pass button worked!')
   return $.ajax({
     url: config.apiUrl + '/change-password',
     method: 'PATCH',
@@ -16,7 +16,7 @@ const changePass = formData => {
 }
 
 const signOut = () => {
-  console.log('your sign-out button worked!')
+  // console.log('your sign-out button worked!')
   return $.ajax({
     url: config.apiUrl + '/sign-out',
     method: 'DELETE',
@@ -28,7 +28,7 @@ const signOut = () => {
 }
 
 const signUp = formData => {
-  console.log('your sign-up button worked!')
+  // console.log('your sign-up button worked!')
   return $.ajax({
     url: config.apiUrl + '/sign-up',
     method: 'POST',
@@ -37,7 +37,7 @@ const signUp = formData => {
 }
 
 const signIn = formData => {
-  console.log('your sign-in button worked!')
+  // console.log('your sign-in button worked!')
   return $.ajax({
     url: config.apiUrl + '/sign-in',
     method: 'POST',

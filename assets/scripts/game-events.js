@@ -22,7 +22,7 @@ const classClicked = event => {
   if (!event.target.className.includes(' used')) {
     event.target.className += ' used'
   }
-  console.log(event.target.className)
+  // console.log(event.target.className)
 }
 
 // const addArray = event => {
@@ -114,8 +114,8 @@ const onUpdateGame = (event) => {
       }
       classClicked(event)
       store.moveCount++
-      console.log(event.target.className)
-      console.log(store.moveCount)
+      // console.log(event.target.className)
+      // console.log(store.moveCount)
       gameApi.updateGame(id, p1, store.logWin, store.moveCount)
         // .then(gameUi.onGameEnd)
         .then(gameUi.onUpdateGameSuccess)
@@ -127,7 +127,7 @@ const onUpdateGame = (event) => {
     $('#status').text('')
     $('#clickResult').text('The Game Has Ended! ' + p1 + ' Won! Start a New Game!')
   }
-  console.log(store.moveCount)
+  // console.log(store.moveCount)
 }
 
 const gameHandlers = event => {

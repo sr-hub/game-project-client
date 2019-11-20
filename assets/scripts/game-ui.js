@@ -41,13 +41,13 @@ const onGameEnd = () => {
 
   const logWin = boardWins.some(element => element === true)
 
-  console.log(events.board)
-  console.log(store.game.cells)
+  // console.log(events.board)
+  // console.log(store.game.cells)
 
   if (logWin === false) {
     gameEnd(events.p1 + 'wins!')
   }
-  console.log(logWin)
+  // console.log(logWin)
 }
 
 const onGameSuccess = message => {
@@ -69,8 +69,8 @@ const onGameFailure = message => {
 const onUpdateGameSuccess = (response) => {
   onGameSuccess('You Successfully Made a Move')
   store.game = response.game
-  console.log(store)
-  console.log('update works!')
+  // console.log(store)
+  // console.log('update works!')
 }
 
 const onUpdateGameFailure = () => {
@@ -99,8 +99,8 @@ const onCreateGameFailure = () => {
 }
 
 const onGetGameSuccess = (response) => {
-  console.log(response)
-  onGameSuccess("You've played " + response.games.length + " games!")
+  // console.log(response)
+  onGameSuccess("You've played " + response.games.length + ' games!')
   $('#gameNum').html(response.games.length)
 }
 
