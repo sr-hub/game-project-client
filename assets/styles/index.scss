@@ -5,7 +5,7 @@ $body-bg-color: $gray-200;
 $font-color: $light;
 
 body {
-  background-color: $body-bg-color;
+  background-color: #daebe8;
   justify-content: center;
   align-content: center;
   display: grid;
@@ -16,9 +16,6 @@ header {
   justify-content: center;
   align-content: center;
   margin: 0 auto;
-}
-
-header {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -27,7 +24,7 @@ header {
 
 .box {
   align-items: center;
-  background-color: $secondary;
+  background-color: #3b3a30;
   border: 1px solid $white;
   color: $font-color;
   display: flex;
@@ -37,13 +34,15 @@ header {
 }
 
 .alt-color {
-  background-color: $alt-color;
+  background-color: $body-bg-color;
 }
 
 .board {
   margin: 0 auto;
-  max-height: calc (70vh);
-  max-width: calc (70vh);
+  max-height: auto;
+  max-width: 100%;
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxYDquSoI9Uwfpxu8IFnLg6t88k7_dD5m4___uqL2yq-AHQkzJ&s);
+  background-size: 100%;
 }
 
 #afterAuth {
