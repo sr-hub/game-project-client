@@ -6,8 +6,22 @@ $font-color: $light;
 
 body {
   background-color: $body-bg-color;
+  justify-content: center;
+  align-content: center;
   display: grid;
   min-height: 100vh;
+}
+
+header {
+  justify-content: center;
+  align-content: center;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 
@@ -37,6 +51,10 @@ body {
 }
 
 #duringPlay {
+  display: none;
+}
+
+#getGameByID {
   display: none;
 }
 

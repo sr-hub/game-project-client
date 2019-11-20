@@ -29,6 +29,7 @@ const onSignOutSuccess = () => {
   onSuccess('You Signed Out! Come Back Soon!')
   $('#afterAuth').hide()
   $('#beforeAuth').show()
+  $('#duringPlay').hide()
   store.user = {}
 }
 
