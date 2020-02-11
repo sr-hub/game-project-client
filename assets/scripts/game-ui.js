@@ -100,8 +100,8 @@ const onCreateGameFailure = () => {
 
 const onGetGameSuccess = (response) => {
   // console.log(response)
-  onGameSuccess("You've played " + response.games.length + ' games!')
-  $('#gameNum').html(response.games.length)
+  onGameSuccess('You have' + response.games.length + ' games!')
+  $('#gameNum').text(response.skills)
 }
 
 const onGetGameFailure = () => {
